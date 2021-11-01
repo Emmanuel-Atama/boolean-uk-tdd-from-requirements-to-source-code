@@ -1,7 +1,4 @@
 function createReceipt(basket) {
-    return (
-        <>
-        </>
-    )
+    return basket
 }
 module.exports = createReceipt
