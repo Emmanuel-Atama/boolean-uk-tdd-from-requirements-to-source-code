@@ -1,20 +1,23 @@
-const totalCostOfItems = require('../src/totalCostOfItems')
+const totalCost = require('../src/totalCostOfItems')
 
 describe('Total Cost of Items in Basket',  function () {
-    it("returns true if basket items are found", function () {
+    it("returns total cost if basket items are found", function () {
      // 1. setup
-    const basket = ["name", "price", "quantity"]  
+    const basket = [
+        {name: "Banana", price: 0.45, quantity: 1},
+        {name: "Apple", price: 0.55, quantity: 1},
+]  
     // 2. Execute
-    const result = totalCostOfItems(basket)
+    const result = totalCost.totalCostOfItems(basket)
     // 3. Verify
-    expect(result).toEqual(true)
+    expect(result).toEqual(1)
     })
-    it("returns false if basket items are not found", function () {
+    it("returns 0 if basket items are not found", function () {
         // 1. setup
-    const basket = [null]  
+    const basket = []  
     // 2. Execute
     const result = totalCostOfItems(basket)
     // 3. Verify
-    expect(result).toEqual(false)
+    expect(result).toEqual(0)
     })
 })
