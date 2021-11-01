@@ -5,7 +5,7 @@ describe('Total Cost of Items in Basket',  function () {
      // 1. setup
     const basket = ["name", "price", "quantity"]  
     // 2. Execute
-    const result = totalCostOfItems.totalCost(basket)
+    const result = totalCostOfItems(basket)
     // 3. Verify
     expect(result).toEqual(true)
     })
