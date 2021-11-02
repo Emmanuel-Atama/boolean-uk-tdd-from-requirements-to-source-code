@@ -4,4 +4,4 @@ function totalCostOfItems(basket) {
 
     return total
 }
-module.exports = totalCostOfItems 
+module.exports = totalCostOfItems
